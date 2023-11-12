@@ -17,8 +17,5 @@ class Multiplier:
         return Matrix(output.tolist())
 
     def inverse(A: Matrix):
-        try:
-            output = np.linalg.inv(A.matrix)
-        except ValueError:
-            return messagebox.showerror("Error", "Singular matrix!")
+        output = np.linalg.inv(A.matrix)
         return Matrix(output.tolist())
